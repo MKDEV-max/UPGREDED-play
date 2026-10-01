@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07080f">
+  <title>UPGREDED — CS2 Skin Upgrade Simulator</title>
+  <meta name="description" content="Upgrade real CS2 skins on the wheel. Virtual Coins only.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="logo">UPGREDED</div>
+      <div class="hud">
+        <div class="hud-pill coins-pill" id="coinsPill">
+          <i class="coin"></i><span id="hudCoins" class="num">0</span><span class="lbl">Coins</span>
+        </div>
+        <div class="hud-pill level-pill">
+          <span class="ico">⭐</span><span class="lbl-full">Level</span><b id="hudLevel" class="num">1</b>
+        </div>
+        <button id="soundBtn" class="icon-btn" data-action="toggle-sound" aria-label="Sound on/off">🔊</button>
+      </div>
+    </header>
+
+    <nav class="nav" id="nav">
+      <button class="nav-btn active" data-action="nav" data-value="home"><span class="ni">🏠</span><span class="nl">HOME</span></button>
+      <button class="nav-btn" data-action="nav" data-value="inventory"><span class="ni">🎒</span><span class="nl">INVENTORY</span></button>
+      <button class="nav-btn nav-main" data-action="nav" data-value="upgrader"><span class="ni">🎡</span><span class="nl">UPGRADER</span></button>
+      <button class="nav-btn" data-action="nav" data-value="shop"><span class="ni">🛒</span><span class="nl">SHOP</span></button>
+      <button class="nav-btn" data-action="nav" data-value="profile"><span class="ni">👤</span><span class="nl">PROFILE</span></button>
+    </nav>
+
+    <main id="main">
+      <!-- HOME -->
+      <section class="screen active" id="screen-home">
+        <div class="home-grid">
+          <div class="home-col">
+            <div class="glass hero" id="heroCard"></div>
+            <div class="glass" id="howCard"></div>
+          </div>
+          <div class="home-col">
+            <div class="glass" id="freeDropCard"></div>
+            <div class="glass" id="dailyRewardCard"></div>
+            <div class="glass" id="missionsCard"></div>
+            <div class="glass xp-card" id="xpCard"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-inventory"></section>
+      <section class="screen" id="screen-upgrader"></section>
+      <section class="screen" id="screen-shop"></section>
+      <section class="screen" id="screen-profile"></section>
+    </main>
+  </div>
+
+  <canvas id="fx"></canvas>
+  <div id="flash" class="flash"></div>
+  <div id="modal" class="modal"><div class="modal-box" id="modalBox"></div></div>
+  <div id="banner" class="banner"></div>
+  <div id="toasts" class="toasts"></div>
+
+  <script src="data.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
